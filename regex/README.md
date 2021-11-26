@@ -25,3 +25,10 @@ The way that RegEx works is it reads left to right, kind of brute-force-y. Does 
 `.` represents *any* character **except newline**. 
 
 Note: this only matches **once**, and is not intended to be a "repeats one or more time". Any metacharacter given is treated as appearing once in the pattern unless told otherwise. 
+
+### Escaping metacharacter
+The `/` character says that the symbol to the right should be treated as a literal character. 
+
+For example, if we wanted to find a period (`.`), we couldn't just put a period in our pattern. That would be treated as a wildcard! 
+- Instead, we'd need to put: `/myregex\.` --> this would find the first match of "myregex."
+- NOTE: only metacharacters should be escaped; there's new meaning with a backslash + a literal character (more on that later)
