@@ -46,3 +46,8 @@ Example: we want to match both **grey** and **gray**. Regex: `/gr[ae]y/g`
 - But, `/gr[ea]t/` does NOT match "great" (not two vowel matches, just ONE). 
 
 We can have any literal characters defined in the character set plus the literal definition of metacharacters, so a period is just `[.]`
+
+### Character ranges
+Denoted by a `-` inside of a character set: note that the **dash becomes a metacharacter inside of a character set**, but **outside of a character set, it is a literal dash**. 
+- Character set for all numbers: `[0-9]`
+- All uppercase and lowercase letters: `[A-Za-z]`
