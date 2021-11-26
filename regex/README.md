@@ -32,3 +32,8 @@ The `/` character says that the symbol to the right should be treated as a liter
 For example, if we wanted to find a period (`.`), we couldn't just put a period in our pattern. That would be treated as a wildcard! 
 - Instead, we'd need to put: `/myregex\.` --> this would find the first match of "myregex."
 - NOTE: only metacharacters should be escaped; there's new meaning with a backslash + a literal character (more on that later)
+
+### Other special characters
+- Spaces are represented in the regex by a literal space. 
+- Tabs: `\t`
+- Line returns: `\r`, `\n`, `\r\n`
