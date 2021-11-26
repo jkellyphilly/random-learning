@@ -37,3 +37,12 @@ For example, if we wanted to find a period (`.`), we couldn't just put a period 
 - Spaces are represented in the regex by a literal space. 
 - Tabs: `\t`
 - Line returns: `\r`, `\n`, `\r\n`
+
+## Character sets
+### Defining a character set
+Use square brackets for this definition. Matches **one** of the characters within the character set. 
+
+Example: we want to match both **grey** and **gray**. Regex: `/gr[ae]y/g`
+- But, `/gr[ea]t/` does NOT match "great" (not two vowel matches, just ONE). 
+
+We can have any literal characters defined in the character set plus the literal definition of metacharacters, so a period is just `[.]`
