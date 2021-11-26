@@ -20,3 +20,8 @@ Other modes:
 **Standard (non-global) matching**: `/zz/` matches the first two z's of 'pizzazz'. However, with **global matching**, `/zz/g` matches both sets of z's in pizzazz.
 
 The way that RegEx works is it reads left to right, kind of brute-force-y. Does the current character match? If yes, does the next one? So on and so forth until the entire RegEx pattern is matched... else, move on to the character *after* the first character in the sub-string we were just looking at. 
+
+### Wildcard metacharacters
+`.` represents *any* character **except newline**. 
+
+Note: this only matches **once**, and is not intended to be a "repeats one or more time". Any metacharacter given is treated as appearing once in the pattern unless told otherwise. 
