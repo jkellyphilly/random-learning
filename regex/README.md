@@ -62,3 +62,17 @@ Characters that need to be escaped inside of a character set: `]`, `-`, `^`, and
 
 For example, what if I want to find all instances of `var[X]` or `var(X)`, where X is any digit 0-9?
 - Solution: `/var[[(][0-9][\])]/g`
+
+### Shorthand character sets
+These are shorthand for character sets: 
+- `\d` --> digit, equivalent: `[0-9]`
+- `\w` --> word character, equivalent: `[a-zA-Z0-9_]`
+- `\s` --> whitespace, equivalent: `[ \t\r\n]`
+
+The negation of those sets are just the same, but *capital* letters, so for instance to match any character that is not a digit, use `\D`.
+
+**Caution**: these two shorthands are NOT the same: `/[^\d\s]/` and `/[\D\S]/`
+- The first is looking for a character that is not a digit or a space character (restrictive)
+    - Is this character a digit? No? Well, if it's a space character, include it!
+- The second is looking for EITHER NOT digit OR NOT space character (this will match a lot of things!)
+    - Is this character a digit? No? Well, if it's not a space character, include it! 
