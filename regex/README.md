@@ -56,3 +56,9 @@ Denoted by a `-` inside of a character set: note that the **dash becomes a metac
 Denoted by `^`. Specifies characters that can NOT appear in the pattern... but can be any *other* character. For example, `/[^aeiou]/g` matches any non-vowel character in the text. 
 
 Another example: `/see[^mn]/` would match `seek` and `sees`, but would not match `seem` or `seen`. **Note**: it would also not match `see` (because there needs to be another character after the second `e` that is not `m` or `n`). It *could* match `see ` (see with a space after it) or `see.` --> there just needs to be another character after the second E, as long as it isn't M or N!
+
+### Metacharacters inside character sets
+Characters that need to be escaped inside of a character set: `]`, `-`, `^`, and `\`. 
+
+For example, what if I want to find all instances of `var[X]` or `var(X)`, where X is any digit 0-9?
+- Solution: `/var[[(][0-9][\])]/g`
