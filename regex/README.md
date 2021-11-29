@@ -76,3 +76,14 @@ The negation of those sets are just the same, but *capital* letters, so for inst
     - Is this character a digit? No? Well, if it's a space character, include it!
 - The second is looking for EITHER NOT digit OR NOT space character (this will match a lot of things!)
     - Is this character a digit? No? Well, if it's not a space character, include it! 
+
+## Repetition
+### Repetition metacharacters
+- `*` = Preceding item, zero or more times
+- `+` = Preceding item, one or more times
+- `?` = Preceding item, zero or one time 
+
+For example:
+- `/apples*/g` matches "apple", "apples", and "applessssss"
+- `/apples+/g` matches "apples" and "applessss", but not "apple"
+- `/apples?/g` does NOT match "applessss", but does match "apple" and "apples"
