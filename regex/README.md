@@ -126,3 +126,14 @@ Examples:
 - `/apple(juice|sauce)/` matches "applejuice" and "applesauce"
 
 A note on efficiency: should always put the smallest/most efficient expression first when using alternations! 
+
+## Anchors
+### Start and end anchors
+- `^`: start of a string/line
+- `$`: end of a string/line
+- `\A`: start of a string, never end of line
+- `\Z`: end of a string, never end of a line
+
+Examples, using string "apples to apples to apples":
+- `/\Aapples/` matches the first 'apples' in the string
+- `/apples\Z/` matches the last 'apples' in the string
