@@ -140,3 +140,13 @@ Examples, using string "apples to apples to apples":
 
 ### Line Breaks and Multiline mode
 Without multiline mode enabled, `^` and `$` only matches the entirety of the end/beginning of a string. However, if we enable multiline mode, it will match the beginning and end of each line. 
+
+### Word Boundaries
+- `\b` --> start/end of word
+- `\B` --> not a word boundary
+
+These reference a position, not a character; specifically, these reference the position before the *first* word character in the string, after the *last* word character in the string, and between *any* word character and non-word character. 
+
+Examples:
+- `/\b\w+\b/` finds four matches in "This is a test."
+- `/\B\w+\B/` finds two matches in "This is a test." --> "hi" in This and "es" in test (everything else has a word boundary on either side!)
