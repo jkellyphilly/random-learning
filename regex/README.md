@@ -102,3 +102,8 @@ Standard repetition quantifiers are greedy. They will try to find a match for th
 What actually happens: the std repetition quantifiers match *as much as is valid* and then "give back" as little as possible to the next portion of the pattern. 
 
 Example: `/.*[0-9]+/` with `Page 266` --> the `[0-9]+` pattern only matches the last '6' character. Everything else is matched by the `.` wildcard.
+
+### Lazy Expressions
+Instructs a quantifier to use a "lazy strategy" for making choices. **Opposite strategy for matching as greedy**: tells the preceding quantifier to match *as little as possible* before giving control to the next part of the pattern. 
+
+Example: `/.*?[0-9]+/` with `Page 266` --> the `.*` has a question mark after it, so it's lazy. Once we reach the character '2', the `.` metacharacter gives up control and the rest of the string ('266') is matched by the `[0-9]+` pattern. 
