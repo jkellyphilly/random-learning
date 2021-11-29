@@ -115,3 +115,12 @@ Use parentheses - this allows us to apply a wildcard to a group of characters (n
 - `/(in)?dependent/` matches "independent" and "dependent"
 
 Go to "replace" in regexr... groups are given as variables `$1`, `$2`, etc. Play around with the find+replace functionality! Seems useful. 
+
+### Alternation metacharacter
+Use the pipe: `|` for alternation. Meaning: **match previous or next expression**. Kind of like OR: matches either expression on left OR on right. 
+
+Note: left choice is given precedence. 
+
+Examples:
+- `/apple|orange/` matches "apple" and "orange"
+- `/apple(juice|sauce)/` matches "applejuice" and "applesauce"
