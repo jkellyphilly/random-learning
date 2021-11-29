@@ -131,9 +131,12 @@ A note on efficiency: should always put the smallest/most efficient expression f
 ### Start and end anchors
 - `^`: start of a string/line
 - `$`: end of a string/line
-- `\A`: start of a string, never end of line
+- `\A`: start of a string, never start of line
 - `\Z`: end of a string, never end of a line
 
 Examples, using string "apples to apples to apples":
 - `/\Aapples/` matches the first 'apples' in the string
 - `/apples\Z/` matches the last 'apples' in the string
+
+### Line Breaks and Multiline mode
+Without multiline mode enabled, `^` and `$` only matches the entirety of the end/beginning of a string. However, if we enable multiline mode, it will match the beginning and end of each line. 
