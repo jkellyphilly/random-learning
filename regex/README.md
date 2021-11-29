@@ -124,3 +124,5 @@ Note: left choice is given precedence.
 Examples:
 - `/apple|orange/` matches "apple" and "orange"
 - `/apple(juice|sauce)/` matches "applejuice" and "applesauce"
+
+A note on efficiency: should always put the smallest/most efficient expression first when using alternations! 
