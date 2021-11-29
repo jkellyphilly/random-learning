@@ -88,10 +88,17 @@ For example:
 - `/apples+/g` matches "apples" and "applessss", but not "apple"
 - `/apples?/g` does NOT match "applessss", but does match "apple" and "apples"
 
-### Quantified repetition
+### Quantified Repetition
 For when we want to match something exactly N times. Denoted by curly braces { } and usually in the form of `{min, max(optional)}`
 
 Three different syntaxes to use:
 - `\d{4,8}` matches four to eight digits
 - `\d{4}` matches *exactly* four digits
 - `\d{4,}` matches four or more digits (max arg is infinity here)
+
+### Greedy Expressions
+Standard repetition quantifiers are greedy. They will try to find a match for the longest possible string that could still be valid from the pattern. 
+
+What actually happens: the std repetition quantifiers match *as much as is valid* and then "give back" as little as possible to the next portion of the pattern. 
+
+Example: `/.*[0-9]+/` with `Page 266` --> the `[0-9]+` pattern only matches the last '6' character. Everything else is matched by the `.` wildcard.
