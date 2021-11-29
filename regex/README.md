@@ -107,3 +107,11 @@ Example: `/.*[0-9]+/` with `Page 266` --> the `[0-9]+` pattern only matches the 
 Instructs a quantifier to use a "lazy strategy" for making choices. **Opposite strategy for matching as greedy**: tells the preceding quantifier to match *as little as possible* before giving control to the next part of the pattern. 
 
 Example: `/.*?[0-9]+/` with `Page 266` --> the `.*` has a question mark after it, so it's lazy. Once we reach the character '2', the `.` metacharacter gives up control and the rest of the string ('266') is matched by the `[0-9]+` pattern. 
+
+## Grouping and Alternation
+### Grouping metacharacters
+Use parentheses - this allows us to apply a wildcard to a group of characters (note, this is NOT a character set). Examples: 
+- `/(abc)+/g` matches "abc" and "abcabcabc"
+- `/(in)?dependent/` matches "independent" and "dependent"
+
+Go to "replace" in regexr... groups are given as variables `$1`, `$2`, etc. Play around with the find+replace functionality! Seems useful. 
