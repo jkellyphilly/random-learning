@@ -6,7 +6,21 @@ It's a shell ("bourne again shell"), a program that allows us to interact with m
 Type `bash` to enter an interactive bash shell. `bash --version` gives the current bash version. 
 
 ### Pipes and redirections
-Result/output of one command/process gets immediately fed into the next. 
+Pipes (`|`): Result/output of one command/process gets immediately fed into the next. 
+- Example: `ls | wc -l` --> takes the result of list and does a word-count. 
+
+#### Output redirections: `>` and `>>`. Puts the contents of one command into a file. 
+- Example: `ls > list.txt`
+- Example: `ls >> list.txt` (add the result of `ls` on to the end of `list.txt` file)
+
+**Note**: we have multiple options for redirections! Can use `1>` (for standard output) or `2>` (for error output)
+
+#### Input redirections and here documents
+- `<` : input redirection
+    - Example: `cat < list.txt` --> send the contents of `list.txt` to `cat`
+- `<<` : here document (read up on that later, no idea what this means)
+    - Example: `cat << EndOfText`
+        - Reads up until the delimiter (in this case `EndOfText`) and passes in to `cat`... ?
 
 ### Bash builtins and other commands
 
