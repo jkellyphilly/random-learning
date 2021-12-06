@@ -33,8 +33,6 @@ We can check to see if a command is builtin or a separate program: `command -V <
 - What if we want to use the command version instead?
 - `enable -n echo` --> now we use the command `echo` instead of the builtin `echo`
 
-### Brackets and braces in bash
-
 ### Bash expansions and substitutions
 
 ### Brace expansion
