@@ -27,7 +27,11 @@ Most commands we run in shell aren't part of bash, but rather other programs on 
 - `echo` --> "echoes" back text/output to the console, **includes a newline char at the end!**
 - `printf` --> prints back to console, **does not include a newline char at the end of the line**
 
-We can check to see if a command is builtin or a separate program: `command -V <name-of-command>`
+We can check to see if a command is builtin or a separate program: `command -V <name-of-command>`. 
+
+**Note**: if there exists a command (such as `echo`) that is *both* a built-in AND a program, the built-in is always given precedence for running. 
+- What if we want to use the command version instead?
+- `enable -n echo` --> now we use the command `echo` instead of the builtin `echo`
 
 ### Brackets and braces in bash
 
