@@ -23,6 +23,11 @@ Pipes (`|`): Result/output of one command/process gets immediately fed into the 
         - Reads up until the delimiter (in this case `EndOfText`) and passes in to `cat`... ?
 
 ### Bash builtins and other commands
+Most commands we run in shell aren't part of bash, but rather other programs on the computer that we run *in* bash. However, there are some built-in bash commands. 
+- `echo` --> "echoes" back text/output to the console, **includes a newline char at the end!**
+- `printf` --> prints back to console, **does not include a newline char at the end of the line**
+
+We can check to see if a command is builtin or a separate program: `command -V <name-of-command>`
 
 ### Brackets and braces in bash
 
