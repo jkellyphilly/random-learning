@@ -34,8 +34,21 @@ We can check to see if a command is builtin or a separate program: `command -V <
 - `enable -n echo` --> now we use the command `echo` instead of the builtin `echo`
 
 ### Bash expansions and substitutions
+`~` --> represents the user's `$HOME` environment variable. Test it out: `echo ~`
+- `~-` --> old directory PWD: gives the next-level-down directory from home you were just working in.
 
-### Brace expansion
+#### Brace expansion
+Allows for multiple options in the command we're running. 
+- Example: `echo c{a,o,u}t`
+- Console output: `cat cot cut`
+
+Instead of just comma-separated values, we can also use two dots to represent a list. 
+- Example: `echo /tmp/{1..3}/file.txt`
+- Console output: `/tmp/1/file.txt /tmp/2/file.txt /tmp/3/file.txt`
+
+Can use multiple expansion sets, too. 
+- Example: `echo file_{01..12}{a..d}.txt`
+- First prints the `file_01a.txt file_01b.txt` etc., *then* moves on to `file_02a.txt`, etc.
 
 ### Parameter expansion
 
