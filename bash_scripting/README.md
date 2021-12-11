@@ -66,7 +66,10 @@ Puts the output of one command into another command.
 
 Example: `echo "The kernel is $(uname -r)."`
 
-### Arithmetic expansion
+#### Arithmetic expansion
+Only in older BASH? Looks like normal expansion but with **two** parentheses (i.e. `echo $(( 4 / 5))`). 
+
+Note: the example above returns zero. This only works with integers (i.e. only integer division supported).
 
 ## Programming with bash
 
