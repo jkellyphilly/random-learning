@@ -51,6 +51,15 @@ Can use multiple expansion sets, too.
 - First prints the `file_01a.txt file_01b.txt` etc., *then* moves on to `file_02a.txt`, etc.
 
 ### Parameter expansion
+Parameters denoted by `$`. Example: `greeting="hello there!"`
+
+Running `echo $greeting` prints "hello there!" to the console (without quotes, of course). We can also get individual portions of the variable(s) (like getting a substring) like this:
+- `echo ${greeting:6}` --> `there!` (starts at the sixth character and prints onward from that)
+
+What if we wanted to **replace** or substitute text in a parameter?
+- `echo ${greeting/there/everybody}` --> `hello everybody!`
+- **NOTE**: with one slash, this only replaces the *first* instance of a match. 
+- If we wanted ALL instances of `there`, we'd write `${greeting//there/everybody}`
 
 ### Command substitution
 
