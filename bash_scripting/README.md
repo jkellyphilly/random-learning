@@ -62,6 +62,9 @@ What if we wanted to **replace** or substitute text in a parameter?
 - If we wanted ALL instances of `there`, we'd write `${greeting//there/everybody}`
 
 ### Command substitution
+Puts the output of one command into another command. 
+
+Example: `echo "The kernel is $(uname -r)."`
 
 ### Arithmetic expansion
 
