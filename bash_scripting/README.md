@@ -82,7 +82,9 @@ Bash scripts are text files that contain a series of commands.
 2. Make the file *executable* by running `chmod +x <file>`
 
 ### Displaying text with echo
+Can either wrap text in quotes OR we have to **escape** special characters (like parentheses). 
 
+**Note**: each echo command includes a newline character at the end. Turn this off with `-n` flag. 
 
 ### Working with variables
 
