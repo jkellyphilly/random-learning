@@ -72,6 +72,39 @@ Only in older BASH? Looks like normal expansion but with **two** parentheses (i.
 Note: the example above returns zero. This only works with integers (i.e. only integer division supported).
 
 ## Programming with bash
+### Understanding Bash Script Syntax
+**One-liners**: a bash script on one line, separated by semicolons/pipes, etc.
+
+Bash scripts are text files that contain a series of commands. 
+
+1. **Important**: for an *executable* bash script file, we have to put a shebang line at the top of the file to tell the OS how to run this program. I.e. is this python? BASH? Ruby? Etc.
+    - `#!/usr/bin/env bash`
+2. Make the file *executable* by running `chmod +x <file>`
+
+### Displaying text with echo
+
+
+### Working with variables
+
+
+### Working with numbers
+
+
+### Comparing values with test
+
+
+### Comparing values with extended test
+
+
+### Formatting and stylng text output
+
+
+### Formatting output with printf
+
+
+### Working with arrays
+
+
 
 ## Bash control structures
 
