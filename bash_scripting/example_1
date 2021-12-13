@@ -4,3 +4,9 @@ echo "hello"
 
 # This is a comment
 echo "there"
+
+# Variable practice
+mygreeting="Hello there!"
+number=6
+echo $mygreeting
+echo $number

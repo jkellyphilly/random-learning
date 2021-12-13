@@ -87,7 +87,14 @@ Can either wrap text in quotes OR we have to **escape** special characters (like
 **Note**: each echo command includes a newline character at the end. Turn this off with `-n` flag. 
 
 ### Working with variables
+When assigning a variable in bash, important to remember that **there should be no spaces on either side of the equals sign**.
+- `mygreeting=Hello`
 
+What if we want to make something **read-only**, that is, set the value and make it unable to be changed?
+- `declare -r myname="Joel"`
+
+Uppercase/lowercase some text: `declare -l mytext="THIS WILL ALL GET LOWERCASED"`
+- `-u` flag for uppercase
 
 ### Working with numbers
 
