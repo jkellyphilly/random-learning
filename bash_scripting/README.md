@@ -97,7 +97,25 @@ Uppercase/lowercase some text: `declare -l mytext="THIS WILL ALL GET LOWERCASED"
 - `-u` flag for uppercase
 
 ### Working with numbers
+Pretty simple stuff. Use arithmetic operators to do some math. 
+- `echo $((4**2))`
 
+Using variables: let's say we set `a` equal to 3. 
+- `((a+=3))` and then `echo $a` results in printing `6` to console.
+- **Note**: can't use the dollar sign within this parameter expansion (i.e. `(($a++))` will yield an error) because the variable is already being expanded
+
+**Note**: important to *declare* variables we want to treat as numbers as integers so BASH doesn't interpret as a string.
+- `declare -i b=3`
+
+**`bc`** --> tells bash how many decimal points to display (?). Consider the following:
+```
+declare -i c=1
+declare -i d=3
+e=$(echo "scale=3; $c/$d" | bc)
+echo $e
+
+CONSOLE OUTPUT: .333
+```
 
 ### Comparing values with test
 
