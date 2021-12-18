@@ -118,7 +118,19 @@ CONSOLE OUTPUT: .333
 ```
 
 ### Comparing values with test
+First of all, to get the full list of commands available, run `help test` from CLI.
 
+`test` is used by square brackets. 
+- Ex: what if we wanted to know if our home directory is a directory?
+- `[ -d ~ ]`
+- Returns (internally) 0/1 indicating success or failure. If failure, error printed to console (else looks like nothing)
+
+Another example:
+- Is 4 less than 5?
+- `[ 4 -lt 5 ]; echo $?`
+- Prints `0` to the console (the `echo $?` command is `echo`ing the previous command's result)
+
+**Note**: remember to keep spaces between the brackets and arguments (i.e. `[4-lt5]` won't work)
 
 ### Comparing values with extended test
 
