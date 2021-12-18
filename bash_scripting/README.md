@@ -133,7 +133,19 @@ Another example:
 **Note**: remember to keep spaces between the brackets and arguments (i.e. `[4-lt5]` won't work)
 
 ### Comparing values with extended test
+Extended test: notation with two brackets (i.e. `[[ ... ]]`)
 
+Example: Is my home directory a directory and does the bash executable file exist? 
+- `[[ -d ~ && -a /bin/bash ]]; echo $?`
+- prints `0` b/c home directory is a directory AND the bash file exists at `/bin/bash`
+
+Note: logical or is `||`
+
+**Regex matching**:
+- `[[ "cat" =~ c.* ]]; echo $?`
+- prints `0` b/c `cat` matches the provided regex
+
+**Note**: extended test isn't always available outside of bash. If working with just bash, can use extended test since there are more features. But if potentially going outside of bash... maybe use test instead?
 
 ### Formatting and stylng text output
 
