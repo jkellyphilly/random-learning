@@ -148,7 +148,11 @@ Note: logical or is `||`
 **Note**: extended test isn't always available outside of bash. If working with just bash, can use extended test since there are more features. But if potentially going outside of bash... maybe use test instead?
 
 ### Formatting and stylng text output
+For `echo`ing something back to terminal, pass `-e` flag for including special characters for formatting purposes (such as tabs/newlines). I.e. `echo -e "Name\t\tNumber"` will print Name (2 tabs) Number. Then moving forward we can correspondingly use two tabs between names and numbers to have a pretty output. 
 
+**The bell**: `/a` makes a *sound* to the user. Can be used to notify the user when something errors (how fun!)
+
+Also options to make colored text. Look into this separately. 
 
 ### Formatting output with printf
 
