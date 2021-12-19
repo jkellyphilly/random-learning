@@ -155,11 +155,31 @@ For `echo`ing something back to terminal, pass `-e` flag for including special c
 Also options to make colored text. Look into this separately. 
 
 ### Formatting output with printf
+Kind of similar to `echo` except less options. 
 
+Here's how to achieve the same print-outs with `echo` and `printf`:
+- `echo "The results are: $(( 2 + 2 )) and $(( 3 / 1 ))`
+- `printf "The results are: %d and %d\n" $(( 2 + 2 )) $(( 3 / 1 ))`
+
+Google how to print the current date. Fairly straightforward with `printf`. 
 
 ### Working with arrays
+Declare an array: 
+- `declare -a snacks=("apple" "banana" "orange")`
+- `echo ${snacks[2]}` --> `orange`
 
+Appending to the end of an array:
+- `snacks+=("mango")`
 
+Inserting into a fixed location:
+- `snacks[5]="mango"`
+
+Show me the entire array:
+- `echo ${snacks[@]}`
+- **Note**: does NOT show empty values in the array.
+
+Array with keys instead of indices (kind of like a dict):
+- `declare -A <array-dict-name-here>`
 
 ## Bash control structures
 
