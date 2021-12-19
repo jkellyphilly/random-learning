@@ -155,7 +155,7 @@ For `echo`ing something back to terminal, pass `-e` flag for including special c
 Also options to make colored text. Look into this separately. 
 
 ### Formatting output with printf
-Kind of similar to `echo` except less options. 
+Kind of similar to `echo` except that there is more options for FORMATTING. 
 
 Here's how to achieve the same print-outs with `echo` and `printf`:
 - `echo "The results are: $(( 2 + 2 )) and $(( 3 / 1 ))`
@@ -178,7 +178,7 @@ Show me the entire array:
 - `echo ${snacks[@]}`
 - **Note**: does NOT show empty values in the array.
 
-Array with keys instead of indices (kind of like a dict):
+**Associated array**: Array with keys instead of indices (kind of like a dict):
 - `declare -A <array-dict-name-here>`
 
 ## Bash control structures
