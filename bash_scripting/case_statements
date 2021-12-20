@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+echo "Case statements!"
+animal="bird"
+case $animal in
+    cat) echo "Feline";;
+    dog|puppy) echo "Canine";;
+    *) echo "Else condition - no match"
+esac
