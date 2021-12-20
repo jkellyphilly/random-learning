@@ -182,6 +182,7 @@ Show me the entire array:
 - `declare -A <array-dict-name-here>`
 
 ## Bash control structures
+See `if_example_1` and `while_example_1` for examples of if/else and while. 
 
 ## Interacting with the user
 
