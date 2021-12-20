@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+declare -i a=3
+
+if [[ $a -gt 5 ]]; then
+    echo "$a is greater than 5"
+elif [[ $a -lt 4 ]]; then
+    echo "$a is less than 4"
+else
+    echo "Haven't measured what we want yet!"
+fi
