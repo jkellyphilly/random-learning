@@ -184,6 +184,8 @@ Show me the entire array:
 ## Bash control structures
 See `if_example_1` and `while_example_1` for examples of if/else and while. 
 
+Same with `until_example_1` and `for_examples`
+
 ## Interacting with the user
 
 ## Bash in the real world
