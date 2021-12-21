@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+greet() {
+    echo "Well, hello there $1!"
+}
+
+echo "And now, a greeting..."
+greet Joel
+
+numberthing() {
+    declare -i i=1
+    for f in $@; do
+        echo "$i: $f"
+        (( i += 1))
+    done
+    echo "This counting was brought to you by $FUNCNAME."
+}
+
+numberthing $(ls /)
+echo
+numberthing pine birch maple spruce
+
+# VARIABLES
+var1="I'm variable 1"
+myfunction() {
+    var2="I'm variable 2"
+    local var3="I'm variable 3"
+}
+myfunction # call the function to set var2/var3
+echo $var1
+echo $var2
+echo $var3 # NOTE: doesn't print cause it is local to myfunction's scope
