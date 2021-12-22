@@ -190,6 +190,11 @@ Same with `until_example_1` and `for_examples`
 
 Denoted like: `fn(){ ... }`
 
+More exampmles in the `function_examples` script. 
+
+### Reading and writing text files
+Writing to: `>` overwrites content, `>>` appends content. 
+
 ## Interacting with the user
 
 ## Bash in the real world
