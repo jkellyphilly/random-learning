@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# 1) Script can take option of -u or -p
+# 2) First colon (before u) says that we want to know which flags
+# were passed outside of the ones we're interested in
+# 3) Script looks to see whether a or b flags are used (but not
+# interested in the values)
+while getopts :u:p:ab option; do
+    case $option in
+        u) user=$OPTARG;;
+        p) pass=$OPTARG;;
+        a) echo "got the A flag";;
+        b) echo "got the B flag";;
+        ?) echo "I don't know what $OPTARG is!"
+    esac
+done
+
+echo "user: $user / pass: $pass"
+
+# Example run: ./bash_scripting/options -u joel -p secret -a -z
+# Example out: 
+#              got the A flag
+#              I don't know what z is!
+#              user: joel / pass: secret
