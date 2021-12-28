@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+echo "$0 script was passed the first argument: $1"
+
+# This is how to get all arguments: $@
+for i in $@
+do
+    echo $i 
+done
+
+# Get the number of all arguments passed: $#
+echo "There were a total of $# arguments passed to this function."

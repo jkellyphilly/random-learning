@@ -196,5 +196,14 @@ More exampmles in the `function_examples` script.
 Writing to: `>` overwrites content, `>>` appends content. 
 
 ## Interacting with the user
+### Working with arguments
+`$0` argument is the name of the script. 
+
+### Working with options
+
+
+### Getting input during execution
+
+
 
 ## Bash in the real world
