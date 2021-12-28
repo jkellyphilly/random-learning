@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+echo "What's your name?"
+read name
+
+echo "What's your password?"
+read -s password
+
+read -p "What's your favorite animal? " animal
+
+# print back the stuff we collected
+echo "name: $name, password: $password, animal: $animal"

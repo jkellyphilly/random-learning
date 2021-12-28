@@ -200,10 +200,13 @@ Writing to: `>` overwrites content, `>>` appends content.
 `$0` argument is the name of the script. 
 
 ### Working with options
-
+Can capture command-line arguments with options flags. Variety of ways to specify what we're looking for. 
 
 ### Getting input during execution
+`-s` is "silent" (use for sensitive stuff, like passwords)
 
+`-p` to do everything on the same line. 
 
+Use a `select` statement to get the user to choose something from a list of options. 
 
 ## Bash in the real world

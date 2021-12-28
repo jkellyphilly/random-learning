@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Select from cat/dog/snake
+echo "which animal?"
+select animal2 in "cat" "dog" "snake" "quit"
+do 
+    case $animal2 in
+        cat) echo "Cats like to sleep.";;
+        dog) echo "Dogs like to bark.";;
+        snake) echo "Snakes! Snakes! Snakes~~~";;
+        quit) break;;
+        *) echo "Sorry, I'm not sure what that is.";;
+    esac
+done
