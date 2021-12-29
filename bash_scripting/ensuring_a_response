@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# -i option puts Blue on the line so if user
+# doesn't enter anything, Blue is already there.
+read -ep "Favorite color? " -i "Blue" favcolor
+
+
+read -p "Favorite animal? [cat is default] " favanimal
+while [[ -z $favanimal ]]
+do
+    favanimal="cat"
+done
+echo "Your fav animal was $favanimal."
+
+
+read -p "what year? [YYYY] " year
+until [[ $year =~ [0-9]{4} ]]; do
+    read -p "Please enter valid year format (YYYY) " year
+done
+echo "Selected year: $year"

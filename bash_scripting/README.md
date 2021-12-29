@@ -209,4 +209,13 @@ Can capture command-line arguments with options flags. Variety of ways to specif
 
 Use a `select` statement to get the user to choose something from a list of options. 
 
+### Ensuring a response
+Can use `-ep` to put a "suggested response" on-screen.
+- If user ignores the prompt and doesn't enter anything, we get the default argument. 
+- User can erase this argument and put in what they want instead.
+
+Another way to provide a **default argument** (kind of) is also presented in the script. 
+
+See `ensuring_a_response`
+
 ## Bash in the real world
