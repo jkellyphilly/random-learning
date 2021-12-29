@@ -219,3 +219,5 @@ Another way to provide a **default argument** (kind of) is also presented in the
 See `ensuring_a_response`
 
 ## Bash in the real world
+### Portability
+Use the variables `$BASH_VERSION` and `$BASH_VERSINFO` to get info on the bash version. Sometimes a script might not work with an older version of bash. We want to see if the version the user is running is somewhat close to what we wrote it with. 
