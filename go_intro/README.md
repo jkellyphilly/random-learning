@@ -22,3 +22,6 @@ What Go *can't* do:
 Go is case sensitive. 
 
 **Initial uppercase character means the symbol is exported**. This is the same as making the variable **public** in some languages... so a **lowercase character** would be the same as saying it's a *private* variable.
+
+### Setup
+(This)[https://go.dev/] is the main site for questions/documentation. I downloaded and then installed an extension for VSCode. 
