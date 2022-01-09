@@ -25,3 +25,28 @@ Go is case sensitive.
 
 ### Setup
 (This)[https://go.dev/] is the main site for questions/documentation. I downloaded and then installed an extension for VSCode. 
+
+### Executing
+Only one source code file per application can have a main function.
+
+- `go run main.go`
+- `go run .` - equivalent to above
+
+Build into an executable file (the compiled version)
+- `go build main.go` (or `go build .`)
+
+## Variables n' stuff
+### Math
+Go has most of the same math operators as other C-style languages, and bitwise operators that are in C/Java. 
+
+Need to do operations together on **same** types. Example:
+```
+var anInt int = 5
+var aFloat float64 = 42
+sum := float64(anInt) + aFloat
+fmt.Printf("Sum: %v, Type: %T\n", sum, sum)
+// CONSOLE OUTPUT:
+// Sum: 47, Type: float64
+```
+
+More functions and constants can be found with `import "math"`. 
